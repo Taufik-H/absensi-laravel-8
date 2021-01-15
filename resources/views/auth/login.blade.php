@@ -3,6 +3,7 @@
 @section('content')
 
 <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+
 <div class="container mt-5">
     <div class="row content">
         <div class="col-sm-6  m-0">
