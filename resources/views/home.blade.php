@@ -8,13 +8,32 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+           <table class="table table-bordered">
+               <thead>
+                   <th>nis</th>
+                   <th>Nama</th>
+                   <th>Kelas</th>
+                   <th>Jurusan</th>
+                   <th>Aksi</th>
+               </thead>
+               <tbody>
+                   @foreach($siswa as $s)
+                   <tr>
+                       <td>{{$s->nis}}</td>
+                       <td>{{$s->nama}}</td>
+                       <td>{{$s->kelas->name}}</td>
+                       <td>{{$s->jurusan->name}}</td>
+                       <td>
+                       <a href="#" class="btn btn-sm btn-success">Detail</a>
+                       <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                       </td>
+                   </tr>
 
-                    {{ __('You are logged in!') }}
+                   @endforeach
+               </tbody>
+           </table>
+                   <a href="{{route('post.create')}}" class="btn btn-primary">TAMBAH</a>
+
                 </div>
             </div>
         </div>

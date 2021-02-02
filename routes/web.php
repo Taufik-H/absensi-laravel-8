@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('dashboard',[SiswaController::class, 'index'])->name('dashboard');
+Route::get('post/create',[SiswaController::class, 'create'])->name('post.create');
+Route::post('post/store',[SiswaController::class, 'store'])->name('post.store');
+Route::post('proses',[SiswaController::class, 'store'])->name('proses');
+
+Route::get('pages/post',[PageController::class,'index'])->name('pages.post');
+Route::get('pages/create',[PageController::class,'create'])->name('pages.create');
+Route::post('pages/store',[PageController::class,'store'])->name('pages.store');
+Route::get('pages/content',[PageController::class,'content'])->name('pages.content');
+
+

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{$title ?? 'Hadirku'}}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,6 +20,26 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+<!-- <div class="wrapper">
+<nav class="sidebar">
+    <div class="sidebar-header">
+    HADIR-KU
+    </div>
+    <ul class="list-unstyled-component" id="homesSubmenu">
+        <a href="#">Home</a>
+    </ul>
+    <ul class="list-unstyled-component" id="homesSubmenu">
+        <a href="#">Notes</a>
+    </ul>
+    <ul class="list-unstyled-component" id="homesSubmenu">
+        <a href="#"></a>
+    </ul>
+
+</nav>
+<div class="content">
+</div>
+
+</div> -->
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -33,7 +53,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li>
+                        <a href="{{route('pages.post')}}" class="nav-link">NOTES</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -45,7 +67,7 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-                            
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -76,6 +98,7 @@
         </nav>
 
         <main class="py-4">
+
             @yield('content')
         </main>
     </div>

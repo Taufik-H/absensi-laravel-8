@@ -46,6 +46,7 @@
                 <!-- end-checkbox -->
                 <button class="btn  btn-outline-primary btn-md" type="submit">{{ __('Login') }}</button>
 
+                <a class="btn btn-link btn-sm mt-4 ml-4" href="{{ __('register') }}">Belum Punya Akun?</a>
                 @if (Route::has('password.request'))
                 <a class="btn btn-link btn-sm mt-4 float-right" href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
