@@ -1,4 +1,4 @@
-@extends('layouts.app' , ['title' => 'Notes'])
+@extends('layouts.admin' , ['title' => 'Notes'])
 @section('content')
     <div class="container">
         <nav aria-label="breadcrumb">

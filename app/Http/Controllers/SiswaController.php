@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Siswa;
-use App\Models\Jurusan;
-use App\Models\Kelas;
+use App\Models\{Siswa,Jurusan,Kelas};
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -20,7 +18,7 @@ class SiswaController extends Controller
             return view('home',[
             'jurusan' => Jurusan::get(),
             'kelas' => Kelas::get(),
-            'siswa'=>Siswa::with('kelas','jurusan')->get(),
+            'siswa'=>Siswa::with('kelas','jurusan')->Simplepaginate(5),
         ]);
     }
 
@@ -110,5 +108,12 @@ class SiswaController extends Controller
     public function destroy(Siswa $siswa)
     {
         //
+    }
+
+    public function AdminProfile(Request $request)
+    {
+        return view('admin/profile');
+
+
     }
 }
