@@ -5,8 +5,9 @@ git clone ....
 composer install
 cp .env.example .env
 ganti nama database sesuai DB mu
-save
 
+save
+jalankan php artisan migrate
 jalankan php artisan serve
 
 note: untuk db kelas dan jurusan di isi manual
