@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
             return view('home',[
@@ -115,5 +110,13 @@ class SiswaController extends Controller
         return view('admin/profile');
 
 
+    }
+    public function list()
+    {
+          return view('crud.list_siswa',[
+            'jurusan' => Jurusan::get(),
+            'kelas' => Kelas::get(),
+            'siswa'=>Siswa::with('kelas','jurusan')->paginate(10),
+        ]);
     }
 }

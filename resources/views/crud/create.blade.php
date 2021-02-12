@@ -51,7 +51,9 @@
                     <input type="text" class="form-control" id="telepon" name="no_hp">
                     <label for="jenis-kelamin">jenis kelamin</label>
                     <input type="text" class="form-control" id="jenis-kelamin" name="jenis_kelamin">
-                    <button type="submit" class="btn btn-primary mt-5">KIRIM DATA</button>
+
+                    <button type="submit" class="btn btn-success mt-5">KIRIM DATA</button>
+                    <a href="{{route('post.list_siswa')}}" class="btn btn-primary mt-5 float-right">LIST SISWA</a>
                     </div>
                 </div>
             </form>

@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function(){
 
     // siswa route
     Route::get('/',[SiswaController::class, 'index'])->name('dashboard');
+    Route::get('post/list_siswa',[SiswaController::class, 'list'])->name('post.list_siswa');
     Route::get('post/create',[SiswaController::class, 'create'])->name('post.create');
     Route::post('post/store',[SiswaController::class, 'store'])->name('post.store');
     Route::post('proses',[SiswaController::class, 'store'])->name('proses');
