@@ -27,7 +27,7 @@ untuk windows kode cp atau copy tidak bisa digunakan maka step ini bisa dilakuka
 copy file ```.env.example``` dan rename ke ```.env```
 <br>
 buat database di localhost lalu
-ganti DB_DATABASE=laravel di file .env sesuai database yang kamu buat
+ganti  DB_DATABASE=`laravel`  di file .env sesuai nama database yang kamu buat
 
 ```
 php artisan key:generate
