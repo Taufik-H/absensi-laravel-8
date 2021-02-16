@@ -29,7 +29,7 @@ cp .example.env .env
 buat database di localhost lalu
 ganti DB_DATABASE=laravel di file .env sesuai database yang kamu buat
 ```
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15 red`
+<span style="color: red;">text</span>.
 ```
 php artisan key:generate
 ```
