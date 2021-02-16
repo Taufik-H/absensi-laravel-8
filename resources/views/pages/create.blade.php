@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Note Create'])
+@extends('layouts.admin', ['title' => 'Note Create'])
 @section('content')
 <div class="container">
  <div class="row">
@@ -31,12 +31,7 @@
  </div>
 
 </div>
-<script>
-  @if(session()->has('success'))
 
-            toastr.success('{{ session('success') }}', 'BERHASIL!');
-    @endif
-</script>
 
 
   <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Content'])
+@extends('layouts.admin', ['title' => 'Content'])
 @section('content')
 
 <div class="container">
@@ -7,9 +7,12 @@
     <h1 >{{$page->title}}</h1>
     </div>
     <p style="margin:0; padding:0; font-size:12px;"class="text-secondary m-0">{{$page->user->name}} &middot; {{$page->created_at->diffForHumans()}}</p>
-
-</div>
+    <hr>    
+    <p class="mt-3">{{$page->content}}</p>
 @endforeach
+
+<a href="{{route('pages.post')}}" class="btn btn-primary mt-4">Back</a>
+</div>
 
 
 @endsection

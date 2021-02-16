@@ -100,8 +100,9 @@ class PageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Page $page)
-    {
-        //
+    {   
+        $page->delete();
+        return back();
     }
 
     public function content()

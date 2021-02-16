@@ -15,7 +15,7 @@
                 <div class="col col-4 mt-3">
 
                     <div class="card border-0 shadow-sm">
-                        <div class="card-header border-bottom-0 bg-white border-top border-success font-weight-bold">{{$page->title}}</div>
+                        <div class="card-header border-bottom-0 bg-white border-top border-success font-weight-bold">{{$page->title}} <div endpoint="{{route('pages.delete', $page)}}" class="delete float-right"></div> </div>
                         <div class="card-body"> {{ Str::limit($page->content, 15,'')}} <br>
                         <a href="{{route('pages.content')}}">Read More</a>
                         </div>
@@ -30,9 +30,10 @@
                 @empty
                  <div class="alert alert-danger ml-3 ">Catatan Kosong!!</div>
             @endforelse
-
+        
 
 
     </div>
 </div>
+<div id="example"></div>
 @endsection

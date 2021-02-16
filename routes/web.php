@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{Route, Auth};
 use App\Http\Controllers\{SiswaController, PageController};
 
 
@@ -29,12 +29,13 @@ Route::middleware('auth')->group(function(){
     Route::post('post/store',[SiswaController::class, 'store'])->name('post.store');
     Route::post('proses',[SiswaController::class, 'store'])->name('proses');
 
-
-
+    //NOTES 
+    
     Route::get('pages/post',[PageController::class,'index'])->name('pages.post');
     Route::get('pages/create',[PageController::class,'create'])->name('pages.create');
     Route::post('pages/store',[PageController::class,'store'])->name('pages.store');
     Route::get('pages/content',[PageController::class,'content'])->name('pages.content');
+    Route::delete('{page:slug}/delete',[PageController::class,'destroy'])->name('pages.delete');
 
     // admin route
     Route::get('admin/profile',[SiswaController::class, 'AdminProfile'])->name('admin.profile');
