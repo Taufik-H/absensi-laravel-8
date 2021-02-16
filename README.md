@@ -29,6 +29,9 @@ cp .example.env .env
 buat database di localhost lalu
 ganti DB_DATABASE=laravel di file .env sesuai database yang kamu buat
 ```
+<div class="text-blue mb-2">
+  .text-blue on white
+</div>
 ```
 php artisan key:generate
 ```
