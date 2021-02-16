@@ -23,10 +23,12 @@ npm run dev
 ```
 cp .example.env .env
 ```
+```diff
 -untuk windows kode cp atau copy tidak bisa digunakan maka step ini bisa dilakukan dengan cara :
 +copy file ```.env.example``` +dan rename ke ```.env```
 buat database di localhost lalu
 ganti DB_DATABASE=laravel di file .env sesuai database yang kamu buat
+```
 ```
 php artisan key:generate
 ```
