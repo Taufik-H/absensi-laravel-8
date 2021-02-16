@@ -9,6 +9,17 @@ cd absensi-laravel-8
 ```
 composer install
 ```
+### Install ui
+```
+composer require laravel/ui
+```
+```
+npm install
+```
+```
+npm run dev
+```
+### Konfigurasi Aplikasi
 ```
 cp .example.env .env
 ```
@@ -24,6 +35,7 @@ php artisan migrate
 ```
 masuk ke localhost buka dan isi tabel jurusan & kelas
 
+### uji aplikasi
 ```
 php artisan serve
 ```
