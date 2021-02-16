@@ -23,8 +23,8 @@ npm run dev
 ```
 cp .example.env .env
 ```
-![#f03c15](untuk windows kode cp atau copy tidak bisa digunakan maka step ini bisa dilakukan dengan cara) :
-![#c5f015](copy file ) ```.env.example``` ![#f03c15](dan rename ke) ```.env```
+![#f03c15]()'untuk windows kode cp atau copy tidak bisa digunakan maka step ini bisa dilakukan dengan cara' :
+![#c5f015]()'copy file ' ```.env.example``` ![#c5f015]()'dan rename ke' ```.env```
 buat database di localhost lalu
 ganti DB_DATABASE=laravel di file .env sesuai database yang kamu buat
 ```
