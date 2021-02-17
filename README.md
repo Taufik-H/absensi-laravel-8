@@ -37,7 +37,9 @@ php artisan key:generate
 ```
 php artisan migrate
 ```
-masuk ke localhost buka dan isi tabel jurusan & kelas
+```
+php artisan db:seed
+```
 
 ### uji aplikasi
 ```
