@@ -40,7 +40,7 @@ function Delete(props) {
     }
 
     return (
-        <button onClick={destroy} className="btn btn-sm btn-danger">Delete</button>
+        <button onClick={destroy} className="btn btn-sm text-danger hapus" >Delete</button>
     );
 }
 

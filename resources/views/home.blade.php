@@ -101,7 +101,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-            <table class="table table-bordered table-striped" cellspacing="0" id="dataTable">
+            <table class="table table-bordered " cellspacing="0" id="dataTable">
         <thead>
                     <th>#</th>
                    <th>nis</th>
@@ -118,8 +118,7 @@
                        <td>{{$s->nis}}</td>
                        <td>{{$s->nama}}</td>
                        <td>{{$s->jenis_kelamin}}</td>
-                       <td>{{$s->jurusan->name}}</td>
-
+                        <td class="label  text-center"><div class="btn btn-sm text-success shadow-sm font-bold" style="background-color: #deffea;">Hadir</div></td>
                    </tr>
 
                    @endforeach

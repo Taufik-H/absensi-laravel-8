@@ -10,12 +10,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{$title ?? 'Hadirku'}}</title>
-
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
@@ -24,8 +25,12 @@
     
     <script src="{{ asset('js/backend.js') }}" defer></script>
 </head>
-
-<body id="page-top">
+<style>
+    .hapus{
+        background-color: #ffd4d4;
+    }
+</style>
+<body id="page-top" style="font-family: 'Poppins', sans-serif;">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
