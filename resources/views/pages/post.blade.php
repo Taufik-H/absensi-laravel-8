@@ -10,8 +10,8 @@
         </ol>
         </nav>
 
-        <div class="row">
-            @forelse($page as $page )
+        <div class="row mb-3">
+            @forelse($pages as $page )
                 <div class="col col-4 mt-3">
 
                     <div class="card border-0 shadow-sm">
@@ -28,12 +28,17 @@
                     </div>
                 </div>
                 @empty
-                 <div class="alert alert-danger ml-3 ">Catatan Kosong!!</div>
-            @endforelse
-        
-
-
+                 <div class="alert alert-danger ml-3 w-100">Catatan Kosong!!</div>
+            @endforelse 
+           
     </div>
+    <div class="row ">
+            <div class="col">
+            <div class=" border-0   mt-3 mb-3  ">  {{$pages->links()}}</div>
+            </div>
+            </div>
 </div>
-<div id="example"></div>
+
+
+
 @endsection

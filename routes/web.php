@@ -28,6 +28,8 @@ Route::middleware('auth')->group(function(){
     Route::get('post/create',[SiswaController::class, 'create'])->name('post.create');
     Route::post('post/store',[SiswaController::class, 'store'])->name('post.store');
     Route::post('proses',[SiswaController::class, 'store'])->name('proses');
+    Route::delete('{siswa:id}/delete',[SiswaController::class, 'destroy'])->name('post.delete');
+    
 
     //NOTES 
     

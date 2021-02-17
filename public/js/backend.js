@@ -1883,7 +1883,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Delete(props) {
   var destroy = function destroy(e) {
-    var afterDeleted = e.currentTarget.parentNode.parentNode;
+    var afterDeleted = e.currentTarget;
     sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
       title: 'Are you sure?',
       text: "Data yang dihapus tidak akan kembali loh !",
@@ -1894,10 +1894,10 @@ function Delete(props) {
       confirmButtonText: 'Yes, delete it!'
     }).then(function (result) {
       if (result.isConfirmed) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().delete(props.endpoint).then(function (response) {
-          afterDeleted.remove();
-        });
-        sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire('Deleted!', 'Data berhasil di delete.', 'success');
+        axios__WEBPACK_IMPORTED_MODULE_0___default().delete(props.endpoint).then(function (response) {}, sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire('Deleted!', 'Data berhasil di delete.', 'success').then(function (window) {
+          location.reload();
+          return false;
+        }));
       }
     });
   };

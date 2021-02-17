@@ -32,7 +32,7 @@
                             <td>{{$s->no_hp}}</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info">EDIT</a>
-                                <a href="#" class="btn btn-sm btn-danger">HAPUS</a>
+                                <div endpoint="{{route('post.delete', $s)}}" class="delete float-right"></div>
                             </td>
                         </tr>
                         @endforeach

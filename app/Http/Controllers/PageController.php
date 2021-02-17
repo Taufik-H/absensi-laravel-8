@@ -17,7 +17,7 @@ class PageController extends Controller
     public function index()
     {
          return view('pages.post',[
-             'page'=> Page::with('user')->get()
+             'pages'=> Page::with('user')->Paginate(6),
          ]);
 
 

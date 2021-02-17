@@ -102,7 +102,7 @@ class SiswaController extends Controller
      */
     public function destroy(Siswa $siswa)
     {
-        //
+        $siswa->delete();
     }
 
     public function AdminProfile(Request $request)

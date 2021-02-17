@@ -18,18 +18,20 @@ function Delete(props) {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                
                 axios.delete(props.endpoint).then((response)=>{
-                    location.reload()
+                 
                 },
-                
-              
-                )
                 Swal.fire(
                     'Deleted!',
                     'Data berhasil di delete.',
                     'success'
-                  )
+                  ).then((window)=> {
+                      location.reload();
+                      return false;
+                  })
+                
+              
+                )
             }
         });
         
