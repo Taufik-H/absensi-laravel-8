@@ -14,6 +14,9 @@ composer install
 composer require laravel/ui
 ```
 ```
+php artisan ui react
+```
+```
 npm install
 ```
 ```
