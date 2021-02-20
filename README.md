@@ -53,4 +53,6 @@ buka di browser
 
 DONE
 
-sisanya tinggal register 
+Login :
+email    = ```admin@gmail.com```
+password = ```admin1234```
