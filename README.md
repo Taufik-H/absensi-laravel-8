@@ -24,7 +24,7 @@ npm run dev
 ```
 ### Konfigurasi Aplikasi
 ```
-cp .example.env .env
+cp .env.example .env
 ```
 untuk windows kode cp atau copy tidak bisa digunakan maka step ini bisa dilakukan dengan cara :
 copy file ```.env.example``` dan rename ke ```.env```
